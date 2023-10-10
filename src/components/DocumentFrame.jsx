@@ -1,4 +1,4 @@
-import '../styles/document.css'
+import '../styles/document.scss'
 import Header from './Header';
 import Help from './Help';
 
@@ -10,8 +10,8 @@ const DocumentFrame = () => {
     <div className="contentWrapper">
     <div className="container">
       <h1 className="pageTitle">lorem ipsum</h1>
-      <p className="smallText"><i>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint fugiat necessitatibus odit! Odio iste ipsam tempora..."</i></p> 
-      <p className="tinyText">"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint fugiat necessitatibus odit! Odio iste ipsam tempora..."</p> 
+      <p className="smallText"><i>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint fugiat necessitatibus odit! Odio iste ipsam tempora..."</i></p>
+      <p className="tinyText">"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint fugiat necessitatibus odit! Odio iste ipsam tempora..."</p>
 
       <div className="detailSection">
         <p>

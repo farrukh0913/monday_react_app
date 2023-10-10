@@ -7,8 +7,8 @@ const Settings = () => {
       <Header />
       <Help />
       <div className="settings">
-      <h1> Settings Page</h1>
-    </div>
+        <h1> Settings Page</h1>
+      </div>
     </div>
   );
 };
