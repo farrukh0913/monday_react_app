@@ -1,7 +1,12 @@
 import '../styles/document.css'
+import Header from './Header';
+import Help from './Help';
 
 const DocumentFrame = () => {
   return (
+    <div className="App">
+      <Header />
+      <Help />
     <div className="contentWrapper">
     <div className="container">
       <h1 className="pageTitle">lorem ipsum</h1>
@@ -36,6 +41,7 @@ const DocumentFrame = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veritatis vel doloribus quam atque illum tempora accusantium ullam voluptas nemo? Ipsum vel dignissimos deserunt? Doloremque deserunt asperiores veritatis eum provident.
         </p>
       </div>
+    </div>
     </div>
     </div>
   );

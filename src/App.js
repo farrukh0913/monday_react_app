@@ -1,5 +1,6 @@
 import './App.css';
-import Home from "./pages/Home";
+import DocumentFrame from './components/DocumentFrame';
+import Settings from './components/settings';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -7,7 +8,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route index element={<DocumentFrame />} />
+          <Route path="/preview" element={<DocumentFrame />} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </BrowserRouter>
     </div>
