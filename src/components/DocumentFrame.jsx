@@ -5,8 +5,6 @@ import Help from './Help';
 const DocumentFrame = () => {
   return (
     <div className="App">
-      <Header />
-      <Help />
     <div className="contentWrapper">
     <div className="container">
       <h1 className="pageTitle">lorem ipsum</h1>
