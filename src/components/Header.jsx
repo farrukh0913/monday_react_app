@@ -1,12 +1,18 @@
 import { ButtonGroup, Button } from "monday-ui-react-core";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/Header.scss";
-import docImage from "../assets/images/2.png";
+import icon from "../assets/images/2.png";
 
 const Header = () => {
   const navigate = useNavigate();
   const [selectedTab, setSelectedTab] = useState(false);
+
+  useEffect(()=> {
+    if(window.location.pathname === '/settings'){
+      setSelectedTab(true);
+    }
+  }, []);
 
   const options = [
     {
@@ -19,7 +25,7 @@ const Header = () => {
     },
   ];
 
-  const onSelectEvent = (value) => {
+  const onSelectTab = (value) => {
     if (value == "preview") {
       setSelectedTab(false);
       navigate("/preview");
@@ -29,20 +35,20 @@ const Header = () => {
     }
   };
 
-  const generateDoc = (event) => {
+  const onGenerateDoc = (event) => {
     console.log("Click Event", event.target.value);
   };
 
   return (
     <div className="header">
-      <img src={docImage} height="50" width="50" />
+      <img src={icon} height="50" width="50" />
       <ButtonGroup
         className="headder"
-        onSelect={onSelectEvent}
+        onSelect={onSelectTab}
         options={options}
         value={selectedTab ? 'settings' : 'preview'}
       />
-      <Button onClick={generateDoc}>Generate</Button>
+      <Button onClick={onGenerateDoc}>Generate</Button>
     </div>
   );
 };
