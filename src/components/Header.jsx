@@ -1,6 +1,6 @@
 import { ButtonGroup, Button } from "monday-ui-react-core";
 import docImage from "../assets/images/2.png";
-
+import '../styles/header.css'
 const Header = () => {
   const options = [
     {
@@ -21,9 +21,9 @@ const Header = () => {
   };
 
   return (
-    <div className="Header">
-      <img src={docImage} />
-      <ButtonGroup onSelect={onSelectEvent} options={options} value="preview" />
+    <div className="header">
+      <img src={docImage} height="50" width="50"/>
+      <ButtonGroup className="headder" onSelect={onSelectEvent} options={options} value="preview" />
       <Button onClick={generateDoc}>Generate</Button>
     </div>
   );

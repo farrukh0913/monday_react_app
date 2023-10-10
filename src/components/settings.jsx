@@ -1,11 +1,11 @@
 import { Button } from "monday-ui-react-core";
 
-const Help = () => {
+const Settings = () => {
   return (
     <div className="fixedBtn">
-      <Button>DocuGen help</Button>
+      <h1> Settings Page</h1>
     </div>
   );
 };
 
-export default Help;
+export default Settings;

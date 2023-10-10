@@ -1,0 +1,56 @@
+
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+.contentWrapper{
+    border: 4px solid #aaa;
+    border-top: 0;
+    padding: 100px 0 50px;
+    margin: 20px 0 0;
+}
+.contentWrapper .pageTitle{
+    font-size: 5rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.contentWrapper .smallText, .contentWrapper .tinyText{
+    font-size: 15px;
+    font-weight: 600;
+    margin: 6px 10px;
+}
+.contentWrapper .tinyText{
+    font-size: 14px;
+}
+.contentWrapper .detailSection{
+    margin-top: 60px;
+    padding: 10px;
+    border-top: 2px solid #000;
+}
+.contentWrapper .detailSection p{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: justify;
+    word-spacing: 5px;
+}
+
+ /* help css code */
+
+ .fixedBtn{
+    position: fixed;
+    left: 30px;
+    bottom: 20px;
+ }
+ .fixedBtn button{
+    background: #6cff1e !important;
+    border: 1px solid #6cff1e;
+    border-radius: 50px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 25px !important;
+    cursor: pointer;
+ }
