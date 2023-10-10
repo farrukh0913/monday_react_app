@@ -5,8 +5,8 @@ const Settings = () => {
   return (
     <div className="App">
       <div className="settings">
-      <h1> Settings Page</h1>
-    </div>
+        <h1> Settings Page</h1>
+      </div>
     </div>
   );
 };
