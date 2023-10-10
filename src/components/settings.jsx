@@ -1,5 +1,4 @@
 import Header from "./Header";
-import Help from "./Help";
 
 const Settings = () => {
   return (

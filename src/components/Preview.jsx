@@ -1,8 +1,6 @@
-import '../styles/document.scss'
-import Header from './Header';
-import Help from './Help';
+import '../styles/Home.scss'
 
-const DocumentFrame = () => {
+const Preview = () => {
   return (
     <div className="App">
     <div className="contentWrapper">
@@ -45,4 +43,4 @@ const DocumentFrame = () => {
   );
 };
 
-export default DocumentFrame;
+export default Preview;

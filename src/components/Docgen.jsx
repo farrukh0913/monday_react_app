@@ -1,6 +1,6 @@
 import { Button } from "monday-ui-react-core";
 
-const Help = () => {
+const DocGen = () => {
   return (
     <div className="fixedBtn">
       <Button>DocuGen help</Button>
@@ -8,4 +8,4 @@ const Help = () => {
   );
 };
 
-export default Help;
+export default DocGen;

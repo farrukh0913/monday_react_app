@@ -1,14 +1,13 @@
 import Header from "../components/Header";
-import Help from "../components/Help";
+import DocGen from "../components/Docgen";
 import { Outlet, Link } from "react-router-dom";
-
 
 const Home = () => {
   return (
     <div className="App">
       <Header></Header>
         <Outlet />
-      <Help></Help>
+      <DocGen></DocGen>
     </div>
   );
 };

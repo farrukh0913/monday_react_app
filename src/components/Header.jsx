@@ -1,8 +1,8 @@
 import { ButtonGroup, Button } from "monday-ui-react-core";
-import docImage from "../assets/images/2.png";
-import "../styles/header.scss";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import "../styles/Header.scss";
+import docImage from "../assets/images/2.png";
 
 const Header = () => {
   const navigate = useNavigate();

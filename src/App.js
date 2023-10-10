@@ -1,16 +1,16 @@
-import './App.css';
-import DocumentFrame from './components/DocumentFrame';
-import Settings from './components/settings';
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from './pages/Home'
+import Preview from './components/Preview';
+import Settings from './components/Settings';
+import Home from './pages/Home';
+import './App.css';
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
         <Route path="/" element={<Home />}>
-          <Route path="preview" element={<DocumentFrame />} />
+          <Route path="preview" element={<Preview />} />
           <Route path="settings" element={<Settings />} />
         </Route>
         </Routes>
