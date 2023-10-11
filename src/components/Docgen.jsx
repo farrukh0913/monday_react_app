@@ -1,13 +1,11 @@
 import { Button } from "monday-ui-react-core";
-import Zendesk, { ZendeskAPI, ZENDESK_API_KEY } from "../zendex/ZendexConfig";
 import { useState } from "react";
+import Zendesk from "react-zendesk";
+import { ZendeskAPI } from "react-zendesk";
+const ZENDESK_API_KEY = "b7c95b5d-f03b-43ab-962a-1c3bebc2b957";
 
 const DocGen = () => {
   const [loadChat, setLoadChat] = useState(false);
-
-  const handleLoaded = () => {
-    ZendeskAPI("messenger", "open");
-  };
 
   const clickEvent = () => {
     setLoadChat((preState) => {
@@ -33,7 +31,7 @@ const DocGen = () => {
   return (
     <div className="fixedBtn">
       {loadChat && (
-        <Zendesk defer zendeskKey={ZENDESK_API_KEY} onLoaded={handleLoaded} />
+        <Zendesk defer zendeskKey={ZENDESK_API_KEY} onLoaded={()=> ZendeskAPI("messenger", "open")} />
       )}
       <Button onClick={clickEvent}>DocuGen help</Button>
     </div>
