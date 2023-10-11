@@ -1,10 +1,9 @@
 import { ButtonGroup, Button, Toast } from "monday-ui-react-core";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect, useContext } from "react";
-import "../styles/Header.scss";
+import { useState, useEffect, useContext, useCallback } from "react";
 import icon from "../assets/images/2.png";
-import { useCallback } from "react";
 import { AppContext } from '../AppContext';
+import "../styles/Header.scss";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -21,7 +20,6 @@ const Header = () => {
       value: "settings",
     },
   ];
-
 
   const genearateDoc = useCallback(() => {
     setBtnLoading(true)
@@ -57,14 +55,12 @@ const Header = () => {
 
   return (
     <div className="header">
-
       <img alt="icon" src={icon} height="50" width="50" />
       <ButtonGroup
         className="headder"
         onSelect={onSelectTab}
         options={options}
-        value={selectedTab ? "settings" : "preview"}
-      />
+        value={selectedTab ? "settings" : "preview"}/>
       <Button loading={btnLoading} onClick={genearateDoc}>
         Generate
       </Button>
