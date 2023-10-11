@@ -5,10 +5,11 @@ import "../styles/Header.scss";
 import icon from "../assets/images/2.png";
 import { useCallback } from "react";
 import { AppContext } from '../AppContext';
+
 const Header = () => {
   const navigate = useNavigate();
   const [selectedTab, setSelectedTab] = useState(false);
-  const [btLoading, setbtLoading] = useState(false)
+  const [btnLoading, setBtnLoading] = useState(false)
   const { sharedState, setSharedState } = useContext(AppContext);
   const options = [
     {
@@ -23,12 +24,12 @@ const Header = () => {
 
 
   const genearateDoc = useCallback(() => {
-    setbtLoading(true)
+    setBtnLoading(true)
     setTimeout(() => {
-      setbtLoading(false)
+      setBtnLoading(false)
       setSharedState(sharedState => !sharedState)
     }, 2000)
-  }, [setbtLoading])
+  }, [btnLoading])
 
 
   useEffect(() => {
@@ -65,7 +66,7 @@ const Header = () => {
         options={options}
         value={selectedTab ? "settings" : "preview"}
       />
-      <Button loading={btLoading} onClick={genearateDoc}>
+      <Button loading={btnLoading} onClick={genearateDoc}>
         Generate
       </Button>
     </div>
