@@ -3,6 +3,7 @@ import Preview from "./pages/Preview";
 import Settings from "./pages/Settings";
 import "./App.css";
 import Header from "./components/Header";
+import DocGen from "./components/Docgen";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <Route path="preview" element={<Preview />} />
             <Route path="settings" element={<Settings />} />
         </Routes>
+        <DocGen/>
       </BrowserRouter>
     </div>
   );
