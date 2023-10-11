@@ -33,7 +33,6 @@ const Header = () => {
 
 
   useEffect(() => {
-    console.log("route:", window.location.pathname);
     navigateToRoute();
   }, []);
 
