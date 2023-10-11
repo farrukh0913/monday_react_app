@@ -1,18 +1,17 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Preview from './components/Preview';
-import Settings from './components/Settings';
-import Home from './pages/Home';
-import './App.css';
+import Preview from "./pages/Preview";
+import Settings from "./pages/Settings";
+import "./App.css";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Header />
         <Routes>
-        <Route path="/" element={<Home />}>
-          <Route path="preview" element={<Preview />} />
-          <Route path="settings" element={<Settings />} />
-        </Route>
+            <Route path="preview" element={<Preview />} />
+            <Route path="settings" element={<Settings />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -2,7 +2,6 @@ import '../styles/Home.scss'
 
 const Preview = () => {
   return (
-    <div className="App">
     <div className="contentWrapper">
     <div className="container">
       <h1 className="pageTitle">lorem ipsum</h1>
@@ -37,7 +36,6 @@ const Preview = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veritatis vel doloribus quam atque illum tempora accusantium ullam voluptas nemo? Ipsum vel dignissimos deserunt? Doloremque deserunt asperiores veritatis eum provident.
         </p>
       </div>
-    </div>
     </div>
     </div>
   );

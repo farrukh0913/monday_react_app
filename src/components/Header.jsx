@@ -7,13 +7,6 @@ import icon from "../assets/images/2.png";
 const Header = () => {
   const navigate = useNavigate();
   const [selectedTab, setSelectedTab] = useState(false);
-
-  useEffect(()=> {
-    if(window.location.pathname === '/settings'){
-      setSelectedTab(true);
-    }
-  }, []);
-
   const options = [
     {
       text: "Preview",
@@ -24,6 +17,20 @@ const Header = () => {
       value: "settings",
     },
   ];
+
+  useEffect(() => {
+    console.log("route:", window.location.pathname);
+    navigateToRoute();
+  }, []);
+
+  const navigateToRoute = () => {
+    if ( window.location.pathname === "/" || window.location.pathname === "/preview" ) {
+      navigate("/preview");
+    } else {
+      setSelectedTab(true);
+      navigate("/settings");
+    }
+  };
 
   const onSelectTab = (value) => {
     if (value == "preview") {
@@ -46,7 +53,7 @@ const Header = () => {
         className="headder"
         onSelect={onSelectTab}
         options={options}
-        value={selectedTab ? 'settings' : 'preview'}
+        value={selectedTab ? "settings" : "preview"}
       />
       <Button onClick={onGenerateDoc}>Generate</Button>
     </div>
