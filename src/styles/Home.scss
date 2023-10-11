@@ -1,5 +1,7 @@
 
 .container{
+    display: flex;
+    justify-content: center;
     max-width: 1140px;
     margin: auto;
 }
@@ -53,4 +55,8 @@
     font-weight: 600;
     padding: 25px !important;
     cursor: pointer;
+ }
+ .monday-storybook-toast_box{
+    width: 40%;
+    top:45px
  }

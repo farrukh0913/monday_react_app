@@ -1,12 +1,15 @@
-import { ButtonGroup, Button } from "monday-ui-react-core";
+import { ButtonGroup, Button, Toast } from "monday-ui-react-core";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import "../styles/Header.scss";
 import icon from "../assets/images/2.png";
-
+import { useCallback } from "react";
+import { AppContext } from '../AppContext';
 const Header = () => {
   const navigate = useNavigate();
   const [selectedTab, setSelectedTab] = useState(false);
+  const [btLoading, setbtLoading] = useState(false)
+  const { sharedState, setSharedState } = useContext(AppContext);
   const options = [
     {
       text: "Preview",
@@ -18,13 +21,23 @@ const Header = () => {
     },
   ];
 
+
+  const genearateDoc = useCallback(() => {
+    setbtLoading(true)
+    setTimeout(() => {
+      setbtLoading(false)
+      setSharedState(sharedState => !sharedState)
+    }, 2000)
+  }, [setbtLoading])
+
+
   useEffect(() => {
     console.log("route:", window.location.pathname);
     navigateToRoute();
   }, []);
 
   const navigateToRoute = () => {
-    if ( window.location.pathname === "/" || window.location.pathname === "/preview" ) {
+    if (window.location.pathname === "/" || window.location.pathname === "/preview") {
       navigate("/preview");
     } else {
       setSelectedTab(true);
@@ -42,20 +55,19 @@ const Header = () => {
     }
   };
 
-  const onGenerateDoc = (event) => {
-    console.log("Click Event", event.target.value);
-  };
-
   return (
     <div className="header">
-      <img src={icon} height="50" width="50" />
+
+      <img alt="icon" src={icon} height="50" width="50" />
       <ButtonGroup
         className="headder"
         onSelect={onSelectTab}
         options={options}
         value={selectedTab ? "settings" : "preview"}
       />
-      <Button onClick={onGenerateDoc}>Generate</Button>
+      <Button loading={btLoading} onClick={genearateDoc}>
+        Generate
+      </Button>
     </div>
   );
 };
