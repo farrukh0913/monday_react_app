@@ -2,6 +2,7 @@ import { Button } from "monday-ui-react-core";
 import { useState } from "react";
 import Zendesk from "react-zendesk";
 import { ZendeskAPI } from "react-zendesk";
+import "../styles/Header.scss";
 const ZENDESK_API_KEY = "b7c95b5d-f03b-43ab-962a-1c3bebc2b957";
 
 const DocGen = () => {
