@@ -6,6 +6,7 @@ import "../styles/Header.scss";
 const ZENDESK_API_KEY = "b7c95b5d-f03b-43ab-962a-1c3bebc2b957";
 
 const DocGen = () => {
+
   const [loadChat, setLoadChat] = useState(false);
 
   const clickEvent = () => {
@@ -24,7 +25,7 @@ const DocGen = () => {
     const iframes = document.getElementsByTagName("iframe");
     if (iframes?.length > 0) {
       for (let i = 0; i < iframes.length; ++i) {
-        iframes[i].style.display = prop;
+        iframes[i].style.display = prop
       }
     }
   };
@@ -32,7 +33,7 @@ const DocGen = () => {
   return (
     <div className="fixedBtn">
       {loadChat && (
-        <Zendesk defer zendeskKey={ZENDESK_API_KEY} onLoaded={()=> ZendeskAPI("messenger", "open")} />
+        <Zendesk defer zendeskKey={ZENDESK_API_KEY} onLoaded={() => ZendeskAPI("messenger", "open")} />
       )}
       <Button onClick={clickEvent}>DocuGen help</Button>
     </div>

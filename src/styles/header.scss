@@ -12,3 +12,7 @@
 iframe{
     bottom: 0 !important;
 }
+
+iframe[title^="Button to launch messaging window, conversation in progress"]{
+    transform: scale(0.6) !important
+}
